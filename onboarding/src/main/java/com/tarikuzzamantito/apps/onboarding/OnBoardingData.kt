@@ -7,6 +7,8 @@ import com.tarikuzzamantito.apps.onboarding.ui.theme.ColorBlue
  * Created by Tarikuzzaman Tito on 8/11/2024 8:18 PM
  */
 data class OnBoardingData(
-    val image: Int,
-    val backgroundColor: Color = ColorBlue
+    val image: Int, val title: String,
+    val desc: String,
+    val backgroundColor: Color,
+    val mainColor: Color = ColorBlue
 )
