@@ -23,3 +23,4 @@ rootProject.name = "JetpackDev"
 include(":app")
 include(":onboarding")
 include(":onboarding02")
+include(":modernuis01")
