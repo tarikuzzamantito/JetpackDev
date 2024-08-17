@@ -13,6 +13,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.tarikuzzamantito.apps.modernuis01.ui.theme.JetpackDevTheme
 
+/**
+ * Created by Tarikuzzaman Tito on 8/16/2024 9:28 PM
+ */
 class ModernUIsMainActivity01 : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
