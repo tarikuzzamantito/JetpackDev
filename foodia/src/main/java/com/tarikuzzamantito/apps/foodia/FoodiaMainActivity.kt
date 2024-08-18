@@ -13,6 +13,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.tarikuzzamantito.apps.foodia.ui.theme.JetpackDevTheme
 
+/**
+ * Created by Tarikuzzaman Tito on 8/18/2024 12:52 AM
+ */
 class FoodiaMainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
