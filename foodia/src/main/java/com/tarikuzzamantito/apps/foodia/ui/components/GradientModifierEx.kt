@@ -44,7 +44,6 @@ fun Modifier.fadeInGradientBorder(
     diagonalGradientBorder(animatedColors, borderSize, shape)
 }
 
-
 fun Modifier.offsetGradientBackground(
     colors: List<Color>,
     width: Float,

@@ -65,9 +65,7 @@ fun FilterBar(
             FilterChip(filter = filters)
         }
     }
-
 }
-
 
 @Composable
 private fun FilterChip(
@@ -85,7 +83,6 @@ private fun FilterChip(
         colors = listOf(Caramel40, primaryLight),
         shape = shape
     )
-
     val textColor by animateColorAsState(
         targetValue = if (selected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface,
         label = "Text color"
@@ -97,9 +94,7 @@ private fun FilterChip(
         shape = shape,
         shadowElevation = 2.dp
     ) {
-        val interactionSources = remember {
-            MutableInteractionSource()
-        }
+        val interactionSources = remember {  MutableInteractionSource() }
         val pressed by interactionSources.collectIsPressedAsState()
         val backgroundPressed = if (pressed) {
             Modifier.offsetGradientBackground(
@@ -132,6 +127,4 @@ private fun FilterChip(
             )
         }
     }
-
-
 }

@@ -43,5 +43,4 @@ fun DestinationBar(
         modifier = modifier
     )
     Divider()
-
 }

@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.windowInsetsTopHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -28,6 +29,7 @@ import com.tarikuzzamantito.apps.foodia.ui.components.FoodCollectionComp
 
 /**
  * Created by Tarikuzzaman Tito on 8/18/2024 6:23 AM
+ * [HoodLab] https://youtu.be/tyBSsJvEiKk [1:07:59 / 2:17:16]
  */
 @Composable
 fun Feed(
@@ -43,7 +45,6 @@ fun Feed(
         modifier = modifier,
     )
 }
-
 
 @Composable
 private fun Feed(
@@ -92,6 +93,7 @@ private fun FoodCollectionList(
             itemsIndexed(foodCollection) { index: Int, foodCollection: FoodCollection ->
                 if (index > 0) {
                     Divider(thickness = 2.dp)
+                    //HorizontalDivider(thickness = 2.dp)
                 }
                 FoodCollectionComp(
                     foodCollection = foodCollection,

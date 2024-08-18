@@ -49,7 +49,9 @@ import com.tarikuzzamantito.apps.foodia.ui.theme.Caramel40
 import com.tarikuzzamantito.apps.foodia.ui.theme.Caramel80
 import com.tarikuzzamantito.apps.foodia.ui.theme.Orange40
 import com.tarikuzzamantito.apps.foodia.ui.theme.Orange80
+import com.tarikuzzamantito.apps.foodia.ui.theme.cookieFont
 import com.tarikuzzamantito.apps.foodia.ui.theme.pacificoFont
+
 /**
  * Created by Tarikuzzaman Tito on 8/18/2024 6:35 AM
  */
@@ -79,7 +81,8 @@ fun FoodCollectionComp(
             Text(
                 text = foodCollection.name,
                 style = MaterialTheme.typography.headlineSmall,
-                fontFamily = pacificoFont,
+                //fontFamily = pacificoFont,
+                fontFamily = cookieFont,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
                 modifier = Modifier
@@ -108,8 +111,6 @@ fun FoodCollectionComp(
             Foods(foodItems = foodCollection.snacks, onFoodClick = onFoodClick)
         }
     }
-
-
 }
 
 @Composable
@@ -126,7 +127,6 @@ fun Foods(
             FoodItemComp(foodItem = foodItem, onFoodClick = onFoodClick)
         }
     }
-
 }
 
 
@@ -160,13 +160,9 @@ fun FoodItemComp(
                 style = MaterialTheme.typography.bodySmall,
                 modifier = Modifier.padding(top = 8.dp)
             )
-
         }
-
     }
-
 }
-
 
 @Composable
 fun HighlightedFood(
@@ -183,7 +179,6 @@ fun HighlightedFood(
         val offsetFromStart = cardWidthWithPaddingPx * rowState.firstVisibleItemIndex
         offsetFromStart + rowState.firstVisibleItemScrollOffset
     }
-
     val gradient = when ((index / 2) % 2) {
         0 -> listOf(Orange80, Caramel40, Caramel80, Orange40)
         else -> listOf(Caramel80, Caramel40, Orange40, Orange80)
@@ -204,9 +199,7 @@ fun HighlightedFood(
             )
         }
     }
-
 }
-
 
 @Composable
 private fun HighlightedFoodItem(
@@ -227,9 +220,7 @@ private fun HighlightedFoodItem(
     ) {
         Column(
             modifier = Modifier
-                .clickable {
-                    onFoodClick(foodItem.id)
-                }
+                .clickable { onFoodClick(foodItem.id) }
                 .fillMaxSize()
         ) {
             Box(
@@ -243,9 +234,7 @@ private fun HighlightedFoodItem(
                         .fillMaxWidth()
                         .offsetGradientBackground(
                             colors = gradient,
-                            width = {
-                                6 * cardWidthWithPaddingPx
-                            },
+                            width = { 6 * cardWidthWithPaddingPx },
                             offset = {
                                 val left = index * cardWidthWithPaddingPx
                                 val gradientOffset = left - (scrollProvider() / 3f)
@@ -277,7 +266,6 @@ private fun HighlightedFoodItem(
             )
         }
     }
-
 }
 
 @Composable
@@ -303,7 +291,5 @@ fun FoodImage(
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
-
     }
-
 }
