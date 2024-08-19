@@ -31,7 +31,6 @@ object FoodRepo {
 /**
  * Static data
  */
-
 private val tastyTreats = FoodCollection(
     id = 1L,
     name = "Foodie picks",

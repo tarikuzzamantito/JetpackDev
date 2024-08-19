@@ -29,7 +29,7 @@ import com.tarikuzzamantito.apps.foodia.ui.components.FoodCollectionComp
 
 /**
  * Created by Tarikuzzaman Tito on 8/18/2024 6:23 AM
- * [HoodLab] https://youtu.be/tyBSsJvEiKk [1:07:59 / 2:17:16]
+ * [HoodLab] https://youtu.be/tyBSsJvEiKk [2:00:01 / 2:17:16]
  */
 @Composable
 fun Feed(
