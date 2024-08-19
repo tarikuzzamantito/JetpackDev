@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.tarikuzzamantito.apps.jetpackdev"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.tarikuzzamantito.apps.jetpackdev"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 

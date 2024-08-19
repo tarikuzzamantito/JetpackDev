@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.tarikuzzamantito.apps.foodia"
+    namespace = "com.tarikuzzamantito.apps.renderpdf"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.tarikuzzamantito.apps.foodia"
+        applicationId = "com.tarikuzzamantito.apps.renderpdf"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
@@ -68,11 +68,12 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
 
-    implementation(libs.androidx.material.icons.extended.android)
-    implementation(libs.coil.compose)
-    implementation(libs.androidx.lifecycle.viewmodel.compose)
-    implementation(libs.androidx.constraintlayout.compose)
+    // splash api
     implementation(libs.androidx.core.splashscreen)
-    implementation(libs.androidx.datastore.preferences)
-    implementation(libs.androidx.navigation.compose)
+
+    // shared preference
+    implementation(libs.androidx.preference.ktx)
+
+    //coil compose
+    implementation(libs.coil.compose)
 }
