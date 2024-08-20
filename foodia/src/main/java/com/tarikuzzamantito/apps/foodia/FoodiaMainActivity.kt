@@ -13,6 +13,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
+import com.tarikuzzamantito.apps.foodia.ui.detail.FoodDetail
 import com.tarikuzzamantito.apps.foodia.ui.home.Feed
 import com.tarikuzzamantito.apps.foodia.ui.theme.JetpackDevTheme
 
@@ -29,8 +31,12 @@ class FoodiaMainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting(name = "Android")
-                    Feed(onFoodClick = {})
+                    //Greeting(name = "Android")
+                    //Feed(onFoodClick = {})
+                    /*FoodDetail(foodId = 2) {
+
+                    }*/
+                    //FoodiaApp(onBoardingViewModel)
                 }
             }
         }
@@ -38,17 +44,14 @@ class FoodiaMainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+fun FoodiaApp(name: String, modifier: Modifier = Modifier) {
+    val navController = rememberNavController()
 }
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun FoodiaAppPreview() {
     JetpackDevTheme {
-        Greeting("Android")
+        //Greeting("Android")
     }
 }
