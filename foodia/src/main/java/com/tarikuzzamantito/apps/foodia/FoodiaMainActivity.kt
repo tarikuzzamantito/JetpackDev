@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
@@ -16,6 +17,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
 import com.tarikuzzamantito.apps.foodia.ui.detail.FoodDetail
 import com.tarikuzzamantito.apps.foodia.ui.home.Feed
+import com.tarikuzzamantito.apps.foodia.ui.navigation.FoodiaNavigationHost
+import com.tarikuzzamantito.apps.foodia.ui.navigation.Tabs
 import com.tarikuzzamantito.apps.foodia.ui.theme.JetpackDevTheme
 
 /**
@@ -36,7 +39,7 @@ class FoodiaMainActivity : ComponentActivity() {
                     /*FoodDetail(foodId = 2) {
 
                     }*/
-                    //FoodiaApp(onBoardingViewModel)
+                    FoodiaApp()
                 }
             }
         }
@@ -44,8 +47,15 @@ class FoodiaMainActivity : ComponentActivity() {
 }
 
 @Composable
-fun FoodiaApp(name: String, modifier: Modifier = Modifier) {
+fun FoodiaApp() {
     val navController = rememberNavController()
+    Scaffold { paddingValues: PaddingValues ->
+        FoodiaNavigationHost(
+            startDestination = Tabs.Feed.route,
+            modifier = Modifier.padding(paddingValues),
+            navController = navController
+        )
+    }
 }
 
 @Preview(showBackground = true)

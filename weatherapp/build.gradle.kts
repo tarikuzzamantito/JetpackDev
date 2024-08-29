@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.tarikuzzamantito.apps.renderpdf"
-    compileSdk = 35
+    namespace = "com.tarikuzzamantito.apps.weatherapp"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.tarikuzzamantito.apps.renderpdf"
+        applicationId = "com.tarikuzzamantito.apps.weatherapp"
         minSdk = 26
-        targetSdk = 35
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -67,16 +67,5 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-
-    implementation(libs.androidx.material.icons.extended.android)
-
-
-    // splash api
-    implementation(libs.androidx.core.splashscreen)
-
-    // shared preference
-    implementation(libs.androidx.preference.ktx)
-
-    //coil compose
-    implementation(libs.coil.compose)
+    implementation(libs.androidx.constraintlayout.compose)
 }

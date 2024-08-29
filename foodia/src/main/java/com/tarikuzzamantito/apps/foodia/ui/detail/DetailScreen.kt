@@ -96,7 +96,6 @@ fun FoodDetail(
     }
 }
 
-
 @Composable
 private fun CollapsingImageLayout(
     collapseFractionProvider: () -> Float,
