@@ -138,15 +138,12 @@ private fun Forecast(
             modifier
         }
     }
-
     val primaryTextColor = remember(item.isSelected) {
         if (item.isSelected) ColorTextSecondary else ColorTextPrimary
     }
-
     val secondaryTextColor = remember(item.isSelected) {
         if (item.isSelected) ColorTextSecondaryVariant else ColorTextPrimaryVariant
     }
-
     val temperatureTextStyle = remember(item.isSelected) {
         if (item.isSelected) {
             TextStyle(
