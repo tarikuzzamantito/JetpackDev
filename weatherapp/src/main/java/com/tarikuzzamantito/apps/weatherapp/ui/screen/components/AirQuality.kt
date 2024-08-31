@@ -35,7 +35,6 @@ import com.tarikuzzamantito.apps.weatherapp.ui.theme.ColorTextPrimaryVariant
 /**
  * Created by Tarikuzzaman Tito on 8/29/2024 2:25 PM
  */
-
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun AirQuality(
@@ -55,7 +54,6 @@ fun AirQuality(
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             AirQualityHeader()
-
             FlowRow(
                 modifier = Modifier.fillMaxWidth(),
                 maxItemsInEachRow = 3,
