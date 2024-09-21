@@ -2,9 +2,11 @@ package com.tarikuzzamantito.apps.doctorappointmentui.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.tarikuzzamantito.apps.doctorappointmentui.R
 
 // Set of Material typography styles to start with
 val Typography = Typography(
@@ -31,4 +33,9 @@ val Typography = Typography(
         letterSpacing = 0.5.sp
     )
     */
+)
+val poppinsFontFamily = FontFamily(
+    Font(R.font.poppins_regular, FontWeight.W400),
+    Font(R.font.poppins_medium, FontWeight.Medium),
+    Font(R.font.poppins_bold, FontWeight.Bold),
 )
